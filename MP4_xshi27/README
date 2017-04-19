@@ -1,0 +1,3 @@
+10 glossy rays per reflection only allowing 2 depth to make it fast to debug....And depth of refraction is 3, so 2 rays on that.
+
+It takes about 3 minutes to render.
