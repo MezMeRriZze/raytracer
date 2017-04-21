@@ -1,5 +1,0 @@
-I render the images using 16 rays per area light by jittered sampling ( the most naive one ). So there is some shattered area (the shadow points) due to small sample amount. The rendering time for the two spheres using instancing is about 10 minutes, and for the 4 spheres not using instancing is about 8 minutes. There is a tradoff between using instancing and not using it since using instancing will use less memory while taking more time to render. Because I need to keep one acceleration structure for each object using instancing. 
-
-I didn't count the time for rendering the bunnies, I run that overnight.
-
-The simple tetrahedron rendering is taking about 15 minutes.
