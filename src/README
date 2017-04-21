@@ -1,3 +1,6 @@
 10 glossy rays per reflection only allowing 2 depth to make it fast to debug....And depth of refraction is 3, so 2 rays on that.
 
+you can see the reflection is glossy through the edge of the spheres (they are somewhat blurred instead of completely sharp)
+The noisy spheres is dark in the reflection just because of sampling issues..... the function seems to have a circling noise effect, with either black or white as a major color.... Anyway, it should just be a noise function issue and function of random sampling of glossy reflection issue, shouldn't be much of a problem.
+
 It takes about 3 minutes to render.

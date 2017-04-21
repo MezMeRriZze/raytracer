@@ -1,10 +1,17 @@
 import numpy as np
 from random import uniform
 from math import *
+from PIL import Image
 
 class NoiseText:
 
-    def __init__(self, priori1, priori2, rng = 2000):
+    def __init__(self, priori1, priori2, rng = 2000, text=  None):
+        self.text = text
+        if text != None : 
+            print self.text
+            self.text = Image.open(self.text)
+            self.h = self.text.size[1]
+            self.text = self.text.load()
         self.x = {} 
         self.y = {} 
         self.z = {}
@@ -61,4 +68,10 @@ class NoiseText:
         y0 = lerp(fy, x0, x1)
         y1 = lerp(fy, x2, x3)
         z = lerp(fz, y0, y1)
-        return z
+        if self.text == None :
+            return z
+        z += 1.0
+        temp = z / 2.0 * self.h
+        temp = self.text[0,temp]
+        ret = np.array([float(temp[0]) / 255, float(temp[1]) / 255, float(temp[2]) / 255])
+        return ret

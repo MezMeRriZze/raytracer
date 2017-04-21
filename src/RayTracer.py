@@ -92,7 +92,7 @@ p = Plane(point, normal, np.array([1.0,1.0,1.0]),1.0 ,1.0,0.05,150, 0.6, "plane1
 tree.insert(p)
 radius = 3
 center = np.array([-10.0, -7.0, -17.0])
-s = Sphere(radius, center, np.array([0.289, 0.2845, 0.3779]), 1.0, 1.0, 1.0, 4, 0.0, "sphere1", noise = True, priori1 = np.array([0.8, 0.6, 1.0]), priori2 = np.array([1.0, 1.0, 1.0]))
+s = Sphere(radius, center, np.array([0.289, 0.2845, 0.3779]), 1.0, 1.0, 1.0, 4, 0.0, "sphere1", noise = True, priori1 = np.array([0.8, 0.6, 1.0]), priori2 = np.array([1.0, 1.0, 1.0]), noisyText = "noisetext.png")
 tree.insert(s)
 
 center = np.array([3.0, -7.0, -17.0])

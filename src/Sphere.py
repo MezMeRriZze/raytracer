@@ -39,7 +39,7 @@ class Sphere:
         material: tuple representing an RGB color with values in [0,255]
     """
     kEpsilon = 0.0000001
-    def __init__(self,r,cntr,mat, ka, kd, ks, matr, ref, name, noise = False, priori1 = None , priori2 = None, trans = None, transDeg = 0.0, glossy = None):
+    def __init__(self,r,cntr,mat, ka, kd, ks, matr, ref, name, noise = False, priori1 = None , priori2 = None, trans = None, transDeg = 0.0, glossy = None, noisyText = None):
         """Initializes sphere attributes"""
         self.glossy = glossy
         self.name = name
@@ -47,7 +47,7 @@ class Sphere:
         self.r=r
         self.noise = None
         self.trans = trans
-        if noise : self.noise = NoiseText(priori1, priori2, rng = self.r + 5)
+        if noise : self.noise = NoiseText(priori1, priori2, rng = self.r + 5, text = noisyText)
         self.c=cntr
 	self.ref = ref
         self.color =mat
